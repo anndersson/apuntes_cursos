@@ -1,0 +1,493 @@
+#VARIABLES EN PYTHON
+las variables en python de declaran de la siguiente manera:
+1) nombre de la varioable
+2) operador de asignación (=)
+3) valor de la variables
+	ejemplo: nombreVariables = 4;
+
+toma en cuenta que la variables en python no necesitan ser
+definidas segun su tipo de dato, este reconose el valor
+asignado y se convierte en una varibale segun su valor.
+	valores:
+		enteros
+		decimales
+		texto
+		logicos (true/false)
+
+
+	atajo:	crea un variable de texto con multiples lineas
+		utilizando las triples comiillas mira el ejemplo
+
+		ejemplo:
+			variableTexto = """ contenido """
+
+		si utilizas este metodo python respetara los salto
+		de linea que tu agregues.
+
+		ejemplo:
+
+			variableTexto = """
+					esto es un listado de ejemplo
+
+					1) dato
+					2) informacion
+					3) y mas datos
+
+					"""
+
+#OPERADORES ARITMETICOS EN PYTHON
+estos funcionan de la misma manera en que los aplicariamos
+en una calculadora respetando la gerarquia de operadores.
+
+	operadores:
+		*	multiplicación
+		/	divición
+		+	suma
+		-	resta
+		%	residuo
+
+	ejemplo:
+		variables = 5 * 6
+
+#OPERADORES LOGICOS
+estos son lo que devuelven como respuesta un resultado entre
+true o false un resultado boolean
+
+	operadores:
+		==	comparación
+		!=	diferencia
+		<	menor que
+		<=	menor o igual que
+		>	mayor
+		>=	mayor o igual que
+
+
+	ejemplo:
+		variable1 = 1
+		variable2 = 2
+
+		resultado = variable1 == variable2
+		# este da como resultado folse
+
+
+#COMENTARIOS EN PYTHON
+para realizar un comentario en python utilizaremos el signo de
+numeral (#) con este podremos realizar un comentario de una
+sola linea.
+
+	atajo:
+		con la combinación de teclas ctrl + /	podemos
+		comentar un grupo de lineas previamente secci-
+		onadas.
+
+
+#IMPRIMIR DATOS POR CONSOLA
+para imprimir o mostrar datos en la consola o terminal lo hacemos
+con la siguiente linea de código:
+
+	print("")
+
+entre los parentesis y colocamos el texto a mostrar o fuera de ellos
+los numeros o variables de deseamos mostrar.
+
+	nota:	en print unicamente podemos colocar datos de tipo
+		str string solo texto por lo que sera necesario converit
+		todos los datos que no sean de tipo texto en texto
+		previamente.
+
+#COMO COMBERTIR UN TIPO DE VARIABLE A OTRO
+bueno como ya te comente existen variables de tipo numerico texto y
+logicos, para usar la propiedad print es nesesario que los datos almace-
+nados sean de tipo texto (str) esto es simple puede reutilizar la misma
+variable para cambiar el tipo de datos
+
+	ejemplo:
+		edad = 8
+		edad = str(edad)
+		print(edad)
+
+	en este ejemplo convertiremos una la variable de tipo entero con
+	valor de 8  aun un texto '8' utilizandose asi mismo como contenedor
+	del resultado, para luego ser mostrado con la propiedad print()
+
+	otros ejemplos:
+		variables = int(variable)
+		varibales = float(variable)
+		variables = srt(variable)
+
+
+#SOLICITAR DATOS POR LA TERMINAL
+para realizar esta función utilizaremos la propiedad input() para que esta
+propiedad funcione de manera correcta es necesario guardar lo que en el
+ingresaremos para ellos utilizaremos una variable.
+
+	ejemplo:
+
+		nombreVariable = input("ingresa un numero")
+
+	nota:	el dato ingresasdo por el usuario se quedara guarado en la
+		variable nombreVariable que sin importar lo ingresado este
+		simpre sera de tipo texto (srt).
+
+	atajo:	puedes pedir un dato u convertirlo en esta misma linea de
+		codigo de la sigueinte manera.
+
+		ejemplo:
+
+			variable = int(input("ingresa un numero")
+
+
+#CONDICIONALES EN PYTHON
+los condicionales requieren de operadores logicos y una estructura
+definida
+
+	nota: en este program no se sierra con : pero la tabulación
+	es muy importante para una correcta ejecución del programa
+
+
+	sintaxis: 
+		if prueba_condicional:
+			codigo a ejecutar
+
+		else:
+			codigo a ejecutar
+
+
+	ejemplo:
+
+		if 5 <=4:
+			print("la respuesta es correcta")
+		else:
+			print("la respuesta no es correcta")
+
+
+#MULTIPLES CONDICIONALES EN PYTHON
+estos se caracterizan por tener multiples pruebas logicas de esta
+manera si una de ella no es verdadera podemos realizar cuantas
+pruebas codicionales necesitemos y ademas concluir con un else
+como respuesta por defauld.
+
+	sintaxis:
+		if prueba_condiciona
+			codigo a ejecutar
+		elif prueba_condicional2:
+			código a ejecutar
+		elif prueba_condicional3:
+			código a ejecutar
+		else:
+			codigo defauld
+
+
+	ejemplo:
+
+		if 10 == 8:
+			print("este es correcto")
+		elif 10 == 7:
+			print("este es el correcto")
+
+		elif 10 == 8:
+			print("entonces es este")
+		else:
+			print("bueno si no entonces este")
+
+#COMO CREAR UN ARCHIVO DE TIPO PYTHON
+para crear un archivo y programas en este lenguaje solo necesitamos
+un documento de texto plano con extención .py en linux puedes
+crearlo con el siguiente comando:
+
+	ejemplo:
+
+		touch programa.py
+
+un programa python en su contendio empieza con una sintaxis definida comunmente
+todo el programa se ensierra en una función la fual sera ejecutada de forma
+automatica cuando se encuentre el metodo if.
+
+	sintaxis:
+
+	def Main():
+	
+		pass
+
+	if __name__ == '__main__':
+	    Main()
+
+
+los programas principales comun mente seran encontrados con el nombre Main
+o run
+
+
+
+#COMO EJECUTAR UN PROGRAMA PYTHON
+este se ejecuta en la terminal de comandos es necesario descargar el
+interprete de python el cual al momneto de ejecutar un programa .py
+te indicara si lo tienes y de no ser asi te indicara los comandos para
+instalarlo:
+
+	ejemplo:
+		python programa.py
+
+	estamos ejecutando un programa con el comnado python seguido 
+	del nombre y extension del archivo.
+
+#PASS
+un pass es utilizado para indicar que en esa linea de código agregare
+algo pero que aun nose de esa manera tendremos un indicador de que
+hace falta algo en ese punto sin que nos de un erro.
+
+	ejemplo
+		if 1<8:
+		    pass
+		else:
+		    pass
+
+
+#COMO REALIZAR FUNCIONES
+para realizar una función utilizremos el metodo def (definition) al cual
+daremos un nombre y una instrucción.
+
+	sintaxis:
+		def nombreFuncion():
+		    deff
+
+	ejemplo:
+
+		def saludar():
+		    print("Hola")
+
+		saludar()
+
+	para ejecutar una función basta con llamarlo por su nombre seguido
+	de sus parentesis.
+
+#PARAMETROS EN LA FUNCIONES
+las funciones pueden trabajarse con parametros o variables de entradas esta
+permiten agregar un dato extra a la función,
+
+	sintaxis:
+		def nombreFuncion(variable)
+		    print(variable)
+
+		nombre_funcion("hola")
+
+#FUNCIONES CON MULTIPLES PARAMETROS
+podemos colocar en una función varios parametros para crear funciones mas
+completas ve el siguiente ejemplo:
+
+	ejemplo:
+		def suma(a,b):
+		    variable = a+b
+		    return variable
+
+		suma(1,3)
+
+podemos devolver el resultado de la función utilizando la palabra return
+como se muestra en el ejemplo, y utilizar print para mostrar algun resutado
+
+	ejemplo 2:
+		def operacion(a,b)
+		    nombreVariable(a+b)
+		    return nombreVariable
+
+		variableGuardarResultado = operacion(2,4)
+
+#PROCESANDO CADENAD DE TEXTOS
+tenemos varias funciones predeterminadas para trabajar con el texto ve los
+siguientes ejemplos:
+
+	ejemplo:	con la función upper puedes convertir un texto en 
+			minusculas a un texto en mayuscula
+		
+		nombre = "emmanuel"
+		nombre.upper()
+		
+
+	ejemplo:	convertir la primera letra en mayuscula para ellos
+			utilizaremos la funcion capitalize()
+
+		nombre = "emmanuel"
+		nombre.capitalize()
+
+	ejemplo:	eliminar el espacio al inicio o al final de un texto
+
+		nombre = "emmanuel"
+		nombre.strip()
+
+	ejemplo:	convertir texto en minusculas
+
+		nombre = "Emmanuel"
+		nombre.lowe()
+
+	ejemplo:	remplazar una letra por otra en una cadena de texto
+			en este ejemplo remplazaremos todas las letras e por a
+
+		nombre = "emmanuel"
+		nombre.replace('e','a')
+
+	ejemplo:	como accesder una letra segun su posición esto lo se
+			realiza tomando en cuenta que la primera letra se
+			encuentra en la posición 0 en adelante, este ejemplo
+			estoy tomando la letra e de la cadena de texto.
+
+		nombre = "emmanuel"
+		nombre[0]
+
+	ejemplo:	como saber la cantidad de letra que posee una cadena
+			de texto.
+
+		nombre = "emmanuel"
+		len(nombre)
+
+
+	ejemplo:	como dividir un na cadena de texto (slices) en este
+			ejemplo dividiremos la variable nombre en dos.
+
+		nombre = "emmanuel"
+		nombre[0:4]
+
+
+	ejemplo:	avanzar en intervalos en una cadena de texto esto lo
+			hacemos indicando de que punto a que punto deseamos
+			mostrar los numero indicados en el intervalo en este
+			ejemplo mostraremos las letras que se encuentre en
+			cada dos salto desde la posición 1 a la 6.
+
+		nombre = "emmanuel"
+		nombre[1:6:3]
+
+	ejemplo:	mostrar todo el texto utilizando la propiedad slices
+
+		nombre = "emmanuel"
+		nombre[::]
+
+
+	ejemplo:	mostrar el texto en forma inverza en diferentes inter-
+			valos.
+
+		nombre[::-1]
+
+#BUCLE WHILE (mientras)
+como su significado indica mientra que una condición sea verdadera ser
+realizara el codigo despues de los 2 puntos de no ser asi el bucle terminaria
+
+	sintaxis:
+
+		while prueba_logica:
+			pass
+
+
+#BUCLE FOR
+un for es utilizado para recorrer balores como un numero en espesifico de repe-
+ticiones o segun su contenid, el punto incial es 0 en adelante y quien guarda
+ese dato es la variables i, 
+
+	ejemplo 1:	en este caso el for dara una buelta por cada letra y
+			posición del contenido de la variable texto, la variable
+			i vale 0 en la primera buelta asta completar el tamaño
+			del texto.
+
+		texto = "texto a recorrer"
+		for i = texto:
+		    print(i)
+
+podemos hacer que un bucle se recorrar en un numero predeterminado ve el ejemplo
+
+	ejemplo 2: este for realiza buelta del 0 al 100
+
+		for i = range(100):
+			print(i)
+
+como detener un buque, esto lo podemos hacer condicionando el rango y buscar un
+numero en espesifico para que este se detenga.
+
+	ejemplo:	en este ejemplo el for esta programado para realizar 100
+			bueltas en cada buelta imprimira el valore de i aremos
+			un condicional que en cada recorrido preguntara si el
+			valor de i es 50 de ser asi con la palabra break termi-
+			namos el proceso.
+
+		for i = range(100):
+			print(i)
+			if i == 50:
+			break
+
+como condicionar condicionando el valor de i
+
+	ejemplo:	en este ejempo se imprimira el valor de i seguido el con
+			el condicional preguntaremos si i es lo mismo que 50 si
+			es asi no debera imprimir el contenido debajo de la 
+			palabra continue si la condición no se cumple entonces si
+			se ejecutara el contenido debajo de continue.
+
+		for i = range(100):
+			print(i)
+			if i ==50:
+			continue
+			print("contenido")
+
+#COMO TRABAJAR LISTAS EN PYTHON
+una lista es casi el equivalente a un array o matriz, la diferencia en python es
+que puede almacenar todo tipo de datos de forma mixta es decir en una lista podemos
+almacenar tanto numero texto boolean etc.
+
+	ejemplo:en esta lista almacenaremos datos variados y para acceder a alguno
+		de ellos solo escribiremos el nombre de la lista y en tre [ ] el
+		numero del espacio en que este se encuentra empezando desde el 0 al
+		numero maximo de datos ingresados
+
+		lista = [1,4,"hola",true,a]
+
+		print(lista [0])
+
+
+	COMO AGREGAR UN DATO MAS A LA LISTA este se agrega al final de la lista
+	ejemplo:
+
+		lista.append("nuevoda")
+
+
+	COMO ELIMINAR UN DATO DE LA LISTA para esto debemos utilizar la posición
+	de datos.
+
+	ejemplo:
+
+		lista.pop(1)
+
+
+#COMO CREAR DUPLAS
+las duplas son un tipo de listas pero que en su interior no podemos alterar su valores
+es decir no podemos eliminar o agregar mas datos a una lista tipo duplas ya que esta
+esta cerrada.
+
+	ejemplo: para declarar una dupla lo hacemos de la misma manera que con la lista
+		 solo que en vez de [] utilizaremos ().
+
+		lista = (1,2,3,4,5)
+
+		print(lista(2))
+
+#COMO CREAR UN DICCIONARIOS DE LLAVES
+en nuestro programa podemos contar con diccionarios estos almacenas un campo y un valor
+a diferencia de las listas este pueden almacenar tanto el titulo y el datos.
+
+	ejemplo:
+		poblacion = {
+			'guatemala' = 100,
+			'suchitepeques' = 50,
+			'santa rosa' = 75
+		}
+
+
+		print(poblacion['guatemala'])
+
+
+		for i = poblacion.keys():
+			print(i)
+
+
+		for i = poblacion.values():
+			print(i)
+
+
+		for titulo, valor in poblacion.items():
+			print(titulos + ' tiene ' + str(valor) + ' habitantes')

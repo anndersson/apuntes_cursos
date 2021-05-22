@@ -1,0 +1,59 @@
+TAREAS PROGRAMADAS
+Estos son procesos que podemos dejar en ejecución en un tiempo definido
+de ejecución automatica. Para ello tenemos dos formas de realizar estas
+programaciones el primero  at y cron estos servicios comunmente no se
+encuentra abilitados con el siguiente comando verificaremos si se encu-
+entran corriendo o activados:
+
+	1) service --status-all
+	
+		si no se encontrara activo alguno de los dos lo podremos
+		activar de la siguiente manera:
+
+			sudo service atd start
+			sudo service cron start
+
+COMO FUNCIONA LA PROGRAMACIÓN CON at
+
+	para programar una tarea en at es bueno conocer el horario para
+	indicar dentro de cuanto tiempo se debe realizar.
+
+	EJEMPLO:
+			at now +2 minutes
+	
+	colocar en el archivo que se te inicia la programación que necesites
+	y termina presionando ctrl + D para salir e iniciar tu programación.
+
+
+COMO FUNCIONAN LAS TAREAS PROGRAMADAS EN cron
+
+	cron utiliza un archivo llamado crontab que permite tener o programar
+	multiples tareas.
+
+	con el sigueinte comando podemos ver las tareas actuales y en esta
+	sección puedo eliminar o crear mas tareas.
+
+		crontab -e
+		en esta posición podras ver una hoja con las tareas programadas
+
+		puedes crear tu propia tarea de la siguiente manera:
+
+		con anteponiendo el signo # puede colocar un comentario que 
+		explique de que va esa programación
+
+		sin utilizar el signo de # programaremos nuestra tarea de la
+		siguiente manera:
+
+		m h d m comando
+
+		agregaremos el minuto la hora el dia el mes y seguido del tiempo
+		agregaremos el comando a ejercutarse en ese tiempo.
+
+		EJEMPLO:
+
+			11 15 * * * echo "hola rockemma" > documentoNuevo.txt
+
+		en este ejemplo estoy ejecutando un mensaje con el echo que
+		luego sera dirigido a un documento nuevo llamado documentoNuevo
+		este se realizara en el minuto 11 y en la hora 15 tados los dias
+		todos los meses y todos los años.

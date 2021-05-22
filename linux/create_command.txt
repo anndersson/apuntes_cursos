@@ -1,0 +1,8 @@
+#COMO CREAR COMANDOS EN LA TERMINAL DE LINUX.
+#podemos crear comandos utilizando el comando alias esto por el momento
+#lo crear de forma temporal pues una vez serrada la terminal estos ya no existiran.
+
+Ejemplo:	en este ejemplo estamos crando un alias de nombre l que ejecutara
+		el comando ls -al para mostrar todos los archivos.
+
+	alias  l="ls -al"

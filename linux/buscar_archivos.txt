@@ -1,0 +1,114 @@
+	BUSCAR ARCHIVOS DENTRO DEL SISTEMA OPERATIVO
+	para buscar archivos que probablemente no recuerdas su ubicación podemos
+	utilizar distintos comando:
+
+	locate		con el comando (locate) seguido del nombre del archivo podemos
+			realizar una busqueda del mismo para ello es necesario tomar en
+			cuenta que este comando debe de actualizarse periodicamente
+
+			sudo updatedb		con este comando ejecutado como usuario
+						root podremos actualizar la base de datos
+						de nuestro sistema operativo.
+
+			buscar un archivo	locate archivo.extension
+
+
+	COMO BUSCAR ARCHIVOS BINARIOS (COMMANDS)
+	con el comando (whereis) podemos buscar comandos comun mente conocidos como
+	archivos binarios o ejecutables, esto es comun cuando queremos encontrar la
+	ubicación de algun paquete de programas que utilizamos o de los comandos mismos
+	de Debian.
+
+		whereis nombreComando
+
+		ejemplo:	buscaremos la ubicación del comando ls el cual usas para
+				enlistar archivos y directorios.
+
+				whereis ls
+
+
+	REALIZAR BUSQUEDAS CON EL COMANDO (find)
+
+	find		opciones de find
+	
+			-name	busca por nombre de archivo
+					find -name nombre_archivo
+				
+				puede espesificar al ruta del find
+					find ruta/ -name nombre_archivo
+				
+				puedes buscar por extensión
+					find  *.txt
+			
+			-type	busca por tipo de archivo
+					find ruta/ -type d
+				
+				tipos de archivos
+				
+					d	directorio
+					f	archivos
+					
+			-size	busca por el tamaño del archvio
+					find ruta/ -size 20M
+			
+			PUEDES REALIZAR DIFERENTES COMBINACIONES
+			
+				buscar por tipo y nombres
+					find ruta/ -type f -mane nombre_archivo.*
+	
+
+			
+	BUSCAR ARCHIVO CON WILDCARDS
+	
+	ls *.extension	muestra los archivo que tengan esa extención
+
+	ls nombre*	busca archivo que empiesen con el texto que antepongas al
+			asterisco.
+
+	ls nombre?	busca toso los archivos que inicien con el nombe que indiques
+			y con el signo de interrogación un caracter extra, puedes
+			agregar los signos de interrogación que necesites para especificar
+			el numero de carcateres adicionales que necesites.
+
+	ls [[:upper:]]*	esto permite buscar archivos que inicien con mayuscula y el resto
+			del contenido sea lo que tenga.
+
+	ls -d [[:upper:]]	esto permite buscar los directorios que incien con mayuscula.
+
+	ls [letra]*	busca un archivo que inicie con la letra que indiques entre los
+			corchetes puedes colocar varias letras y buscara los archivos que
+			inicien con alguna de las letras.
+			Ejemplo:
+				ls [a]*
+			Ejemplo:
+				ls [ai]*
+
+
+	RALIZAR UNA BUSQUEDA DE UN ARCHVIO BINARIO (PROGRAMA)
+	
+	which 		busca la ubicación del programa
+
+			whitch nombre_programa
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+

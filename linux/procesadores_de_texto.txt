@@ -1,0 +1,23 @@
+EL PROCESADOR DE TEXTO MAS UTILIZADO ES vi y vim
+La diferencia entre ellos es la verción donde vi en la primera verción y 
+vim es la verción mejorada por eso la m.
+
+	COMO CREAR UN ARCHIVO CON vim
+
+		vim nombre_archivo.extension
+
+
+	COMO INSERTAR TEXTO EN vim:
+		para ello presionamos la tecla i o la tecla ins
+
+	COMO BUSCAR UN TEXTO EN vim:
+		presionamos / y escribimos la palabra a buscar seguido de enter
+
+	COMO GUARDAR NUESTRO ARCHIVO EN vin:
+		ingresamos : seguido de la letra w + enter
+
+	COMO SALIR DE vim:
+		ingresamos : y la letra q + enter
+
+	COMO GUARDAD Y SALIR DE vim:
+		ingresamos : y las letras wq + enter

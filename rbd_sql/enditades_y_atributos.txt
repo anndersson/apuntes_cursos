@@ -1,0 +1,41 @@
+ENTIDADES
+las entidades son de quiene hablamos, esto puede ser un objeto una persona
+aninal empresa lugar entre muchas cosas mas una entidad es de quien se habla
+en la base de datoas.
+
+	ATRIBULOS:
+	los atibutos son caracteristicas que conforma o hablan de la entidad
+	estos de forma grafica se identifican con ovalos.
+
+
+	EJEMPLO:
+	podemos de hablar de una entidad como un automóvil y describir sus
+	atributos
+
+		AUTOMÓVIL
+			llantas
+			volante
+			modelo
+			motor
+			pistones
+			bujias
+
+	TIPOS DE ENTIDADES
+	tenemos dos tipos de entidasde, entidades fuertes y entidades deviles
+		ENTIDADES FUERTES
+		estas entidades son aquellas que no necesitan de otra entidad
+		para existir.
+
+		ENTIDADES DEBILES
+		estas son aquellas que dependen de otras entidades para existir
+		ya que su información va de la mano con otras entidades.
+
+		EJEMPLO:
+			la entidade "libro" es una entidad que no depende de
+			nadie para existir, pero la identidad "ejemplar" si
+			necesita de la entidad libro para poder existir ya que
+			sin libros la entidad ejemplares no podria usarse por
+			la falta de libros.
+
+
+	

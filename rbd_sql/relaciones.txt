@@ -1,0 +1,6 @@
+FORMA DE RELACIONAR LAS ENTIDADES
+estas son representadas con un rombo, esta es una union con dos entidades
+ejemplo:
+	jugadores	<pertenece>	equipo
+
+

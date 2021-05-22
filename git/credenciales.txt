@@ -1,0 +1,10 @@
+# 	CONFIGURACAIÓN DE MIS CREDENCIALES EN GIT
+
+#	COMO VER LAS CREDENCIALES:
+	para ver tus credenciales puedes utilizar el siguientes comando
+	en cualpier parte de la terminal pues esta se asigna por persona no
+	por resitorio.
+	
+		$ git config -l
+		
+

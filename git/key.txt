@@ -1,0 +1,111 @@
+#	COMO CREAR NUESTRA LLAVE PUBLICA Y PRIVADA.
+
+	1)	primero configuraremos nuestro correo como usuario de
+		github con el comando que ya conoces para configurar las
+		credenciales globales:
+			
+			$ git config --global user.email "adress@mail.com"
+			
+	2)	confirma el cambio de correo con el siguientes comando:
+		
+			$ git config -l
+			
+	3)	Utiliza el siguiente comando para crear la llave SSH en el
+		directoro home/nombreUsuario   (~).
+		
+			$ ssh-keygen -t rsa -b 4096 -C "correo@email.com"
+	
+	4)	Te pedira que indiques donde donde deseas guardar la llave
+		te recomiendo dejarlo en la carpeta del usuario.
+			
+	5)	Te pedira que agregues una contraseña adicional puedes agregarlo
+		y confirmar o dejar vacia esa sección y precionar enter en ambas 
+		peticiones para omitir ese paso.
+		
+		se habra creado una carpeta oculta con el nombre .ssh/ donde 
+		encontraras la llave publica (id_rsa.pub) y privada (id_rsa).
+		
+	6: 	en Windows es necesario agregar la llave privada al sistema 
+		ya que esta no la reconoces y esto lo aremos con los sigueintes
+		comandos:
+		
+			$ eval $(ssh-agent -s)  //evalua que este corriendo
+			$ ssh-add ~/.ssh/id_rsa // agrega la llaver privada
+			
+	6.1:	en MAC es necesario agregar la llave privada al sistema 
+		ya que esta no la reconoces y esto lo aremos con los sigueintes
+		comandos:
+		
+			$ eval "$(ssh-agent -s)" // verificamos eque este corriendo
+			$ ssh-add rutade-la-llave-privada // agrega la llave privada
+			
+		NOTA:	Si usas una versión de OSX superior a Mac Sierra (v10.12)
+			debes crear o modificar un archivo config en la carpeta .ssh
+			con el sigueinte contenido(este archivo no tienen ninguna 
+			extensión).
+			
+			Host *
+				AddKeysToAgent yes
+				UseKeychain yes
+				IdentityFile ruta-donde-guardaste-tu-llave-privada
+			
+			
+			
+			
+			en caso de error puedes ejecutar el siguiente comando:
+			
+				$ ssh-add -K ruta-donde-guardaste-tu-llave-privada
+				
+				
+# CONEXIÓN A GITHUB CON SSH
+
+	Esta coneción lo haces compartiendo la llave publica con la cuenta de github
+	
+	1)	ingresa a configuración/SSH and HPG keys
+	
+	2) 	da clic en <New SSH key> para gregar un nombre y el contendio de la llave
+		publica de tu ordenador, este es el archivo .ssh/id_rsa.pub).
+		
+	3)	Presiona <Add SSH KEy> pra completar los cambios.
+	
+
+
+# 	COMO CAMBIRA EL ORIGIN DE HTTPS DE MI REPOSITORIO LOCAL AL SSH
+
+	1)	Copia el link SSH del repositorio remoto de github
+	
+	2)	ingresa a la carpeta del repositorio local y utiliza el siguiente
+		comando para cambiar la dirección de fetch y push.
+		
+		$ git remote set-url origin link-SSH-del-repositorio-remoto
+
+	NOTA:	para conectar con algun repositorio de esa cuenta es necesario
+		hacer un pull para que se actualise la información de la llave.
+
+
+
+#---------------------------------- IMPORTANTE
+	tu llave publica puedes compartirlo con tu cuante de github u otras en las que te
+	permitan formar parte de un equipode desarrollo.
+	
+
+
+
+
+
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

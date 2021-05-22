@@ -1,0 +1,148 @@
+
+
+FLUJOS ESTANDARS, COMUNICACIÓN ENTRE PROCESOS.
+
+Para comprender este tema toa en cuenta que en los procesos tenermos lo sigueinte
+	
+	entredas (input) = 0
+	salidads (ouput) = 1
+	errores  (error) = 2
+	
+
+
+Esto es por que para realizar algo debemos meter infomración un (0) y de ello
+resiviremos dos opciones una salidad que puede ser (1) si el comando existe y
+esta bien escrito o (2) si el comando ingresado nos indica que hay un error.
+
+			La comunicación entre procesos funciona cuando dirigimos
+			nuestra la salida de uno de ellos y convertimos en entrada
+			para un proceso mas.
+			
+			
+			PIPE OPERATOR
+			permite te pasar un proceso a otro el signo es | y se puede utilizar
+			cuantas veces sea necesario.
+			
+			
+			ejemplo:
+				Mostramos el resultado del comondo ls a un proceso more que
+				permite ver el contenido resumido al alto de tu ventana.
+
+					ls -l | more 
+					cat nombreDocumeto.extension | more
+
+			Ejemplo:
+				muesta un mensaje con el comando cowsay que sirve para mostar
+				un mensaje y una vaca y a la vez pintarlo de colores con el
+				comando lolcat concluyendo en guardarlo en un archivo.
+				
+				cowsay "hola mundo" | lolcat | tee vaca.txt
+
+				utilizamos el signo de menor que para pasar una salida
+				a otro proceso en este caso es el de colocar los resultados
+				enun archivo ya existente o nuevo.
+
+					ls > nombreArchivoNuevo.extension
+
+				Como concatenar:
+				si el archivo indicado ya es existente con un signo de
+				mayor que > se sobrescribirá el contenido de ese archivo
+				no el nuevo contenido, pero si agregamos dos signos >>
+				estaremos agregando contenido a ese archivo en la párte 
+				final.
+
+					ls >> nombreArchivoExistente.extension
+				
+				Como redirigir la salida del error:
+				podemos indicar que lo que redirija no se el output(1)
+				si no que sea el estandar error (2) de la siguiente manera
+				
+					ls 2> archivo.extension
+					
+				Como redirigir tanto la salida 1 como la salida 2:
+				esto lo aremos utilizando el signo de &
+				
+					ls > archivo.extension 2>&1
+
+				como ultimo ejemplo vemos como con el proceso de cat
+				podemos ver el contenido de un archivo y lanzamos este
+				proceso como entrada para el proceso wv -l que cuenta
+				la cantidad de líneas del contenido de un archivo.
+
+					cat nombreArchivo.extension | wc -l
+
+
+ADMINISTRACIÓN DE PROCESOS EN BACKGROUND Y FOREGROUND
+
+			administrar tus proceso te permite dejar procesos en segundo plano
+			ya que si tuvieras un proceso que dura mucho tiempo no podrías
+			realizar otros procesos asta que este se termine de ejecutar.
+
+			USOS:
+			
+			&	Si un proceso podría demorar y eres consciente de ello puedes
+				colocar después del comando del proceso el signo de & esto
+				ara que tu proceso se inicie pero se coloque en segundo pla-
+				no y puedas seguir dando uso de la terminal.
+
+					ls -l &
+
+			Ctrl + z	Si ya ejecutamos un proceso pero necesitamos mandarlo
+					a un segundo plano (background) podemos utilizar la
+					combinación de teclas Ctrol + z
+
+			fg	Para regresar ese proceso y otro podemos realizarlo con el
+				comando fg directamente en la terminal.
+
+			Ctrl + c	con esta combinación de tecla podremos interrumpir
+					el proceso que este en ejecución y no se encuentre
+					en primer plano.
+
+			jobs	con este comando podemos ver los procesos que se encuentran
+				en el backgroud, programas que emos enviado con el Ctrl + z
+
+			fg #	con este comando y un el numero de grabajo podemos traer al
+				frontend el proceso que deseemos recuerda que si tienes mas
+				de un proceso en background a estos se les asigna un numero
+				para poder elejir que proceso deseamos retomar.
+
+					fg 1
+
+VER LOS PROCESOS QUE ESTAN CORRENDO EN SEGUNDO PLANO.
+
+			ps	muestra los proceso que estoy ejecutando
+
+				OPCIONES
+
+					ax	muestra todos los procesos incluido
+						los del sistemas.
+
+			top	muestra los proceso en tiempo real con información de cada
+				proceso tales como PID TTY STAT TIME y COMMAND.
+				
+				h	presiona esta tecla para desplegar la ayuda de comandos
+	
+				q	con el comando q podemos salir de esta vista.
+				
+				
+
+			kill	utilizado para cortar o matar un proceso, para realizar esta
+				acción necesitamos el PID del proceso en ejecución el PID
+				lo podemos averiguar con el comando top:
+
+				ejemplos: kill -9 12645
+					
+					kill PID	mata un proceso que tiene la posi-
+							bilidad de escuchar otros comandos
+							mientras está en ejecución.
+
+					kill -9	PID	el comando acompañado de la opción
+							-9 permite matar un proceso de forma
+							forzada.
+
+					killall	command	permite matar un proceso de forma
+							forzada pero en lugar de utilizar
+							el PID se agrega el nombre del 
+							comando.
+							
+							

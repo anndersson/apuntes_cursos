@@ -1,0 +1,15 @@
+#ENTIDADES EN LAS BASES DE DATOS
+las entidades son nombres representativos de las cosas reales
+estas pueden ser lo que tu necesites, las entidades es de quien
+se desea hablar en la base de datoas.
+
+las entidades tienes antributos de esa manera sabemos que es una
+entidad
+
+	ejemplo: automovil
+		atributos:
+			volante
+			llantas
+			motor (es un atributo compueto)
+			antiguedad
+		

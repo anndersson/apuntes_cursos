@@ -1,0 +1,30 @@
+UTILIDADES PARA NUESTRA RED
+
+	ifconfig	muestra configuración de nuestra red
+	
+	ping		muestra la conección entre algun servicio por medio de los paquetes
+			es util para saber si tenemos una conección
+			
+			ping www.exampol.com
+			
+			Ejemplo:
+				ping www.google.com
+			
+	curl		permite traer un contenido en forma de texto de la red
+	
+			curl www.exampol.com
+			
+	wget		permite descargar un archivo de la red
+	
+			wget www.exampol.com
+			
+	traceroute	nos indica por todas las computadoras por las que pasamos al
+			conectarnos algun punto
+			
+			traceroute www.exampol.com
+			
+	netstat -i	nos muestra los dispositivos de red
+	
+			netstat -i
+			
+			

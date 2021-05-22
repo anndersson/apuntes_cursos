@@ -1,0 +1,15 @@
+#COMO SOLICITAR IFORMACIÓN Y AYUDA DE LOS COMANDOS QUE UTILIZAMOS
+
+help:	Permite ver información en la shel del comando
+	Ejemplo:
+		help nombre_comando
+
+man:	Permite ver información mas detallada de un comando
+	este hace referencia al manual de los comandos.
+	Ejemplo:
+		man nombre_comando
+
+whatis	nos da información brebe del comando este no esta disponible
+	en todos los sistemas.
+	Ejemplo:
+		whatis nombre_comando

@@ -1,0 +1,46 @@
+#	COMO AGREGAR UN ORIGEN REMOTO A NUESTRO REPOSITRIO LOCAL
+
+	1)	Crea un repositorio remoto y copia el link HTTPS
+
+	2) 	Utiliza el comando $ git remote add origin link_HTTPS
+		//para agregar un origen remoto.
+
+	3)	Utiliza el comando $ git remote //para verificar que cuentas
+		con un origin remoto en tu repositorio local.
+
+	4)	Utiliza el comando $ git remote -v //con la opción -v de verbal
+		puedes ver la dirección del origen remoto para hacer un (fetch)
+		y (push).
+
+
+
+#	COMO ACTUALIZAR NUESTRO REPOSITORIO LOCAL CON EL CONTENIDO DEL REPOSITORIO
+	REMOTO.
+
+	NOTA:	asegurate de tener actualizado tu repositorio local:
+		$ git status
+
+	1)	Posicionate en el directorio del repositorio local y ejecutar el
+		siguiente comando.	$ git pull origin main.
+
+	NOTA:	El nombre del origin debe ser la rama de la que deseas optener la
+		información main es el utilizado para la rama principal, tambien
+		era conocida como la rama master.
+	
+	IMPORTANTE: 	Si la primera actualización no funciona o te da algun error
+			puedes utilizar el sigueinte comando prara forzar la
+			actualización:
+
+			$ git pull origin nombreRAMA --allow-unrelated-histories
+
+
+
+#	COMO ENVIAR TU TRABAJO LOCAL AL REPOSITORIO REMOTO (UPDATE)
+	
+	NOTA:	Para realizar una actualización toma en cuenta que debes actualizar
+		antes el repositorio realizando un pull.	
+
+	1)	Utiliza este comando para indicar que deseas actualizar la rama 
+		principal u otra.
+
+			$ git push origin nombreRAMA

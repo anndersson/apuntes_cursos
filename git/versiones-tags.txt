@@ -1,0 +1,84 @@
+#COMO VER LA HISTORIO QUE A LLEVADO MI PROYECTO
+
+	para ello aremos uso de los sigueintes comandos:
+	
+		$ git log --all --graph
+		
+		
+	con el siguiente comando puedes ver toda la historia de manera
+	mas resumida y decorada.
+	
+		$ git log --all --graph --decorate --oneline
+		
+	puedes crear un alias en linux sin necesita usar este comando
+	que es tan extenso de la siguienes manera.
+	
+		$ alias arbolito = "git log --all --graph --decorate --oneline"
+		
+		NOTA:	este alias sera funcional durante la vida actual de la
+			terminal al serrar la terminal el alias ya no funcionara
+			puedes colocarle el nombre que gustes en este caso usamos
+			arbolito.
+			
+#COMO CREAR UN TAG (VERSION)
+	
+	los tags se crean a partir de un commit quiza el utilmo comit de una
+	etapa de tu código en que todos indicaron que ya estaba todo listo
+	por eso usamos log para elegir el numeral del comit con que crearemos
+	este tags (version).
+	
+		la opción -a indica agrega y la opción -m un mensaje.
+	
+	1)	$ git tag -a nombre-a-asignar-a-la-version -m "descripción o mensaje" numero-de-commit
+		
+	NOTA:	Los nombres de los tags comun mentes tienen nombres como V0.1
+	
+
+#COMO VER DONDE LOS TAGS DEL PROYECTO
+
+	$ git tag
+	
+	Como ver a que commit esta conectado dicho tag
+	
+		$ git show-ref --tags
+		
+#COMO ENVIAR UN TAG AL REPOSITORIO REMOTO
+
+	1)	como buena practica has un $ git pull
+	
+	2)	$ git pull origin --tags
+	
+
+#COMO ELIMINAR UN TAG DEL REPOSITORIO LOCAL Y REMOTO
+
+	1)	eliminaremos el tag en nuestro repositorio local
+		
+			$ git tag -d nombre-del-tag
+			
+		Envia los cambio al repositorio remoto no te olvides
+		de hacar un $ git pull.
+		
+			$ git pull origin --tags
+		
+		nota: la opción -d indica delate.
+		
+	2)	Eliminaremos el tag del repositorio remoto es se debe
+		de hacer de otra manera pues en el repositorio remoto
+		estos tags son tomados como versiones de referencia.
+		
+		para indicar que elimine en el area remoto antes debemos
+		de eliminarlo en el area local y con el siguientes comando
+		hacer la referencia.
+		
+			$ git push orign :refs/tags/nombre-del-tag
+			
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

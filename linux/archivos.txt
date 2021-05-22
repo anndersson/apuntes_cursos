@@ -1,0 +1,212 @@
+
+
+ASIGNACIÓN DE NOMBRE PARA ARCHIVOS
+	para nombrar archivo o directorio no se recomienda el uso de espacios
+	sin embargo es necesario para tener una mejor lectura de las cosas
+	como podemos nombrar un archivo o directorio que lleva espacios.
+
+	ejemplo 1	"nombre de archivo.txt"
+
+	ejemplo 2	 nombre\ de\ archivo.txt
+
+	COMO NOMBRAR UN ARCHIVO DE LA FORMA TRADICIONAL
+	en este caso debemos de utilizar un guion bajo para indicar un espasio
+	entre palabras, o simplemente despues de la primera palabra las que le
+	siguien deben de iniciar la primera letra en mayusculas.
+
+	ejemplo 1	nombre_de_archivo.txt
+	
+	ejemplo 2	nombreDeArchivo.txt
+
+
+CREACIÓN DE ARCHIVOS
+	Para la creación de archivos se pueden utilizar distintos metodos es
+	pueden ayudarnos a crear un archivo y permitirnos editarlo en un mismo
+	comando.
+
+	touch		con este comando puedes crear un archivo en el directorio
+			en eque me encuentre o al que señales.
+
+			Ejemplo:
+				touch nombreDocumento.extension
+
+
+	cat		con este comando podemos visualizar el contenido de un 
+			archivo.
+
+			Ejemplo:
+				cat archivo.extension
+	
+	less		permite ver un archivo o resultado con opciones de busqueda
+			una ves ejecutada el comando puedes iniciar varias opciones
+			con la barra inclinada para escribir un comando o palabra a
+			buscar
+			
+				less archiv.extension
+				
+				/dato a buscar
+				
+				q	utiliza la letra q para salir de less.
+				
+
+	head		el comando head permite visualizar las primeras lineas del
+			contenido de un archivo.
+
+			Ejemplo:
+				head archivo.extension
+
+			OPCIONES:
+				-n		con esta opción podemos indicar
+						cuantas líneas del inicio queremos
+
+			Ejemplo:
+				head -n numeroDelineas nombreArchivo.extension
+
+			
+	tail		este comando tiene como función mostrar las ultimas lineas
+			de un archivo, este archivo comparte las mismas opciones
+			que el comando head.
+
+			Ejemplo:
+				tail archivo.extension
+	
+	xdg-open	permite abrir un archivo desde el programa que lo puede leer
+			
+			Ejemplo:
+				xdg-open nombreArchivo.extension
+
+	tree		despliga los directorios como si fueran un arbol
+
+			OPCIONES:
+				-L	muestra los archivos en un nivel indicado
+
+				Ejemplo: en este ejemplo desplegamos solo en dos niveles.
+					tree -L 2
+
+ELIMINACIÓN DE UN ARCHIVO:
+	Para eliminar un archivo utilizaremos el comando "rm" cuya abreviación es
+	la de la palabra remove.
+
+	rm		permite eliminar un archivo:
+
+			Ejemplo:
+				rm archivo.extension
+	Opciones de rm
+
+	rm -ri		permite eliminar los archivo de un directorio el programa
+			te preguntara si quieres eliminara cada uno de los archivos.
+
+	rm -rf		Esto forsa la iliminación de un archivo o directorio sin
+			importar su contenido.
+
+	
+MOVER UN ARCHIVO
+
+	mv		permite movilizar un archivo de un directorio a otro.
+			Ejemplo:
+				mv nombreArchivo.extesion /direcciónNueva
+
+COPIAR UN ARCHIVO
+
+	cp		con este comando podemos copiar un archivo de un punto
+			a otro para este comando es necesario dos argumento el
+			primero es indicar el origen/archivo y el segundo el
+			lugar donde se desea colocar la copia.
+
+			Ejemplo:
+				cp archivo ~/Documents
+
+				cp ~/Documents/archivo ~/Musica
+
+
+
+NAVEGACIÓN EN EL DOCUMENTO
+
+	grep		este comando permite localizar entre las líneas del
+			documento si existe la palabra que le indiquemos, este
+			toma en cuenta las mayúsculas y minúsculas
+			ejemplo:
+				grep palabraABuscar nombreDelDocumento.extension
+
+			OPCIONES
+				-i	permite búsqueda sin límite de mayúscula
+					o minúscula.
+					
+					grep -i palabra archivo.extension
+
+				-i "$"	con esta opción podremos buscar un conte-
+					nido según con que letras termine ejemplo
+					
+					grep -i "palabra$" documento.extension
+				
+				-c	indica el numero de veces en que aparece una
+					palabra.
+					
+					grep -c palabra archivo.extension
+					
+					podemos combinar las opciones
+					
+					grep -ic palabra archivo.extension
+					
+				-v	busca todos aquellos que no coincidan con la
+					palabra indicada
+					
+					grep -vi palabra archivo.extension
+					
+	wc		busca el numero de linea, el numero de caracteres y el numero
+			de bits.
+			
+				wc archivo.extension
+				
+			OPCIONES:
+			
+				-l	muestra el numero de lineas
+					
+					wc -l archivo.extension
+					
+				-w	busca numero de palabras
+				
+					wc -w archivo.extension
+				
+				-c	muestra el numero de bits
+				
+					wc -c archivos.extension
+				
+	
+
+	sed		este comando permite sustituir una palabra por otra en
+			Todo el flujo del documento a momento de mostrarse este
+			Comando no modifica el archivo.
+			Ejemplo:
+				sed 's/palabraCambiar/palabraNueva/g' Archivo
+
+				NOTA: la 's' indica sustitución y la 'g' indica
+				que este cambio se realice en todo el flujo.
+
+			OPCIONES:
+				'$d'	elimina la última línea del archivo
+
+
+	nl		muestra el documento con la lineas enumeradas sin embargo
+			no toma en cuenta las lineas vasias pero con algunas opciones
+			podemos ver con mas detalles.
+
+			nl archivo.extension		muesta las lineas enumeradas
+							pero no toma en cuenta las
+							lineas vasias.
+
+			nl -b a archivo.extemsion	con las opciones -b y a podemos
+							enumerar las lineas tomando en
+							cuenta las lineas vasias.
+
+			nl -s "." archivo.extension	con este comando agregamos la
+							enumeración de las lineas y
+							adicional despues de cada numero
+							un signo este puede ser el que
+							gustes solo debes colocarlo entre
+							las comillas en este caso utilizamos
+							un punto.
+
+			ln -w3 archivo.extension	con esta opción puedes agregar una
+							tabulación despues de la enumeracion
+							para obtener una salida mas ordenada.

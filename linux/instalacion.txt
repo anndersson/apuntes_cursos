@@ -1,0 +1,53 @@
+INTALACIÓN DE PAQUETES O PROGRAMAS EN LINUX
+existen diferente asdministradores de paquetes que podemos utilizar para la intalación
+de programas, en linux lo conocemos mas como paquete mas que como programas estos tienen
+un origien y los administradores nos atudan con la instalación ya que estos ya sabes
+donde se encuentran estos paquetos en su mayorias entre los administradores disponibles
+tenemos los siguientes:
+	
+	apt	este se utiliza para las distribuciones de linux basadas en Debian tales
+		como ubuntu.
+
+	zypper	este se utiliza para distribuciones de linux como SUSE o OpenSUSE.
+
+	rpm	este es el administrador de paquete universal sin embargo es algo rustico
+		su uso.
+
+	EJEMPLO:
+		instalaremos un navegador de internet de linea de comandos llamado lynx,
+		toma en cuenta que.
+		para instalar cualquier programa necesitas ser super usuario (root),
+		para ellos utilizaremos el comando apt con la opción install.
+
+			sudo apt install lynx
+
+				para utilizar este programa solo debes de colocar el
+				comando lynx antes del nombre de la pagina:
+
+					lynx pagina.com
+
+INSTALACIÓN DE PAQUETES DE LENGUAJE
+si trabajamos con lenguajes para el desarrollo de software es posible que necesitemos
+de manejadores de paquetes predefinidos por el mismo lenguaje aca algunos ejemplos:
+
+	pip		utilizado para instalar paquetes de pyton
+	
+	composer	para paquetes de php
+
+	npm		utilizado para paquetes de node JS
+
+
+	EJEMPLO:
+	para instalar una libreria por ejemplo de php lo ariamos de la siguiente
+	manera:
+
+			sudo pip install nombreLibreria
+
+
+OTORS MANEJADORES DE PAQUETES
+para la instalación de paquetes tambien tenemos dos que son universales, funcionan de la
+misma manera:
+
+		conda
+
+		homebrew

@@ -1,0 +1,33 @@
+COMO CREAR UN ACCESO DIRECTO
+en la terminal estos no se llaman accesos directos si no links simbolicos
+son pequeños archivos que al ejecutarlos no envia a una dirección establecida:
+
+COMO CREARLOS
+Estos los creamos con el comando ln (link) y la opción -s (simbolico)
+	ln -s direccion/
+	
+
+
+
+BARIABLES DE ENTORNO:
+una variable de entorno almacena información puede ser una ruta, mensaje o configuración
+sirve como puntos de información para otros programas, estos nos es de mucha utilidad
+cuando trabajamos con otras aplicaciones o creamos nuestros scripts
+
+ruta:
+	para configurar esta variables nos vamos a buscar el siguiente archvio
+
+	~/home/nombres_usuario/.bashrc
+	
+nota:	toma en cuenta que linux usamos bash si fuese otro sistema el nombre del bash
+	seria otro
+
+
+COMO LLAMAR A UNA VARIABLE DE ENTORNO:
+	esto lo aremos con el signo $ y el nombre de la bariables
+	
+	Ejemplo: muestra el valor de la variable pat.
+		echo $PHAT
+
+
+

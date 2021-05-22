@@ -1,0 +1,97 @@
+	COMO COMPRIMIR ARCHIVOS DE GRAN PESO
+	esto puede ser de grana yuda ya que podemos tener archivos que tiene un peso
+	muy grande para compartir o enviar por mail y con un peso mejor se facilita
+	su envio o almacenamiento en memoria.s
+
+	PASO A SIGUIR:
+		con el siguiente comando podremos vel el información del archivo a
+		comprimir viendo su peso en miles para resumir las cantidades grandes
+
+			ls archivo.extension -lh
+
+		gzip	con este comando seguido del nombre del archivo podremos com-
+			primir el su tamaño en un archivo .gz
+
+				gzip archivo.extension
+
+		ls	un atajo para encontrar un archivo con el comando ls en con
+			el signo asterisco (*) luego del nombre del archvio de esta
+			manera podremos ver todos los archivos que inicien con esta
+			letras.
+
+			veras que ahora tendras un archivo con extención -gz el cual
+			indica que es un archivo comprimido.
+
+	
+	DESCOMPRIMIR UN ARCHIVO
+	un archivo comprimido no puede ser leido unicamente luego de ser descomprimido
+	para ello utilizaremos el siguiente comando.
+
+		gzip	con el mismo comando que utilizamos para comprimir podemos
+			descomprimir el archivo utilizando la opción -d (descomprimir)
+			
+				gzip -d archivo.extension.gz
+
+
+	EMPAQUETAR MULTIPLES ARCHIVO
+	para empaquetar multiples archivos necesitamos colocar esos archivo en un directorio
+	para su empaquetamiento para eyo seguiremos los siguientes pasos.
+
+		tar cf nuevoNombre.tar directorio/*
+
+	con el comando tar indicamos un empaquetado, con la opción (cf) indicamos que se
+	empaquetaran varios archivos de un diretorio, es necesario luego de la opción (cf)
+	agregar el nombre con que se guardara el nuevo archivo de empaquetado seguido del
+	nombre del directorio con el contenido a empaquetar indicando con el (*) que debe
+	empaquetar todo en su interior.
+
+	MOSTRAR EL CONTENIDO DE UN TAR
+	para ver el contenido de un archivo empaquetado .tar utilizamos el siguiente comando
+
+		tar tf nombreArchivo.tar
+
+	DESEMPAQUETAR UN ARCHIVO .TAR
+	para desempaquetar un archivo .tar utilizaremos la opción (xf) seguido del nombre del
+	archivo .tar
+
+		tar xf archivo.tar
+
+	EMPAQUETAR Y COMPRIMIR MULTIPLES ARCHIVOS.
+	podemos entonces realizar la opción de empaquetar multiples archivos y asu ves com-
+	primirlos para ellos crearmos un archivo comprimido .tgz
+
+		tar czf nombreArchivo.tgz directorio/*
+
+	DESCOMPRIMIR UN ARCHIVO .tgz
+	para recuperar los archivos comprimido en un tgz utilizaremos la opción (xzf) el
+	cual nos permite recuperar el contenido en un directorio con el mismo nombre que el
+	archivo .tgz
+
+		tar xzf archivo.tgz
+		
+	Ver los resultaado en la terminal
+		
+		
+	COMPRIMIR UN ARCHVIO CON ZIP
+	este es un compresor que bien por defecto
+	
+		zip -r nombre_archivo_comprimido.zip nombre_archivo_a_comprimir
+		
+	COMO DESCOMPRIMIR UN ARCHIVO ZIP
+	
+		unzip nombre_archivo.zip
+		
+		COMPRIMIR UN ARCHVIO CON rar
+	este es un compresor que bien por defecto
+	
+		rar -r nombre_archivo_comprimido.zip nombre_archivo_a_comprimir
+		
+	COMO DESCOMPRIMIR UN ARCHIVO ZIP
+	
+		unrar nombre_archivo.zip
+		
+		
+		
+		
+		
+		

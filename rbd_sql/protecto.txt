@@ -1,0 +1,20 @@
+PROYECTO ROCKEMMA BLOGS
+en este proyecto crearemos la base de datos para los posts del sitio web
+primero declaramos las entidades seguido de sus atributos:
+
+	posts
+		titulo
+		fecha_publicacion
+		contenido
+		estatus
+		etiquetas
+		id
+
+
+	usuario
+		login
+		passwords
+		apodo
+		email
+		id
+

@@ -1,0 +1,12 @@
+INTERACTUAR CON EL PROTOCOLO HTTP
+
+COMO REALIZAR UN PEDIDO A HTTP CON curl
+
+	curl http://paginaeninternet.com/
+
+		este comando recibirá el html de la pagiana tal y como fue escrita
+	
+	wget http://google.com
+
+
+ACCESO SEGURO A OTRAS COMPUTADORAS

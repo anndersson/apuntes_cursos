@@ -1,0 +1,124 @@
+LISTA DE COMANDOS PARA LINUX BASICO
+
+
+LOS COMANDOS EN LINUX SON ABREVIACIONES DE LA PALABRA COMPLETA EN INGLES ESTOS
+COMANDOS PUEDEN IRNA COMPAÑADOS DE OPCIONES Y ARGUMENTOS.
+
+	TERMINAL	interfas de texto, pormite ejcutar comandos e instrucci-
+			ónes, con el podemos automatizar y sacar mejor rendimiento
+
+	COMANDOS:	los comandos son pequeños programas que realizan acciones
+			en el sistema operativo.
+
+	OPCIONES:	las opciones cambian el comportamiento del comando para
+			que realice su cometido pero con opciones agregadas o
+			resumidas.
+
+			/	indica el directorio raíz del sistema operativo
+			$	indica el directorio del usuario
+			..	indica que es el directorio padre
+			.	indica el directorio actual
+
+	ARGUMENTOS:	los argumentos complementan un comando estos dan infor-
+			mación adicional para su funcionamiento.
+
+
+
+LISTA DE COMANDOS:
+
+
+NAVECACIÓN
+	pwd		muestra la dirección actual en que te encuentras.
+
+	ls		permite desplegar un listado del contenido de la carpeta
+			actual, también puedes especificar de que carpeta deseas
+			ver el contenido.
+			-OPCIONES
+				-l	muestra mas detallen en la lista
+				-a	muestra el contenido oculto de la lista
+				-al	permite realizar las dos opciones ateri-
+					ores declarado en una misma opción.
+				-t	ordena la lista por fecha de codificación
+				-x	ordena por nombre y después por extensión
+				-X	ordena primero por extensión.
+				-lh	muestra la información en KB, MB
+				
+
+	cd		permite movilizarte entre directorios.
+			Ejemplos:
+				cd ..	se moviliza a la carpeta padre de tu
+					ubicación.
+
+				cd	luego del comando agrega el nombre del
+					Directorio hijo al que deseas moverte.
+
+				cd /	te moviliza a la carpeta raiz del sis-
+					tema operativo.
+
+				cd $	te moviliza a la carpeta del usuario.
+
+NOMBRE DE ARCHIVOS Y CARPETAS EN LA TERMINAR
+	para nombrar archivo o directorio no se recomienda el uso de espacios
+	sin embargo es necesario para tenr una mejor lectura de las cosas
+	como podemos nombrar un archivo o directorio que lleva espacios.
+
+	ejemplo 1	nano "nombre de archivo.txt"
+
+	ejemplo 2	nano nombre\ de\ archivo.txt
+
+	NOTA		puede usar esta misma forma para dirigirte a ellas
+			para realizar algun otro proceso.
+
+
+COMO EJECUTAR ARCHIVOS VARIOS COMANDOS
+
+	COMANDOS DE MANERA SECUENCIAL:
+	para ejecutar comandos en orden lo aremos separandolos con un punto y coma
+	Ejemplo:
+		ls ; mkdir directorio; cal
+		
+	COMO EJECUTAR COMANDOS AL MISMO TIEMPO
+	para esta opción se crear un proceso por cada comando de manera independiente
+	
+	Ejemplo:
+		ls & cal
+		
+	CREAR COMANDOS DE MANERA CONDICIONAL
+	
+	OPERADOR Y (&&)
+	para ello utilizaremos dos veces el signo && que indica solo si el comando
+	anterior se ejecuta correctamente.
+	Ejemplo:
+		mkdir directorio1 && cd directorio1
+		
+	OPERADOR O (||)
+	con este comando ejecutaremos comandos condicionados con el operador or en este
+	ejemplo podemos ver que si el primer comando no se ejecuta correctamento el segundo
+	puede ejercutarse.
+	Ejemplo:
+		cd asdfas || echo "mensaje"
+		
+		el direcotiro asdfas no existe pero muestra aun el mensaje.
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
