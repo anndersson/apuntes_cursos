@@ -1,0 +1,38 @@
+#COMO CREAR UNA RAMA DE NUESTRO ROYECTO
+
+	$ git branch nombre-de-la-rama
+	
+#COMO CAMBIAR ENTRE RAMAS
+
+	$ git checkout nombre-de-la-rama
+	
+#COMO VER LAS RAMAS CREADAS
+
+	$ git branch
+	
+	$ git branch -r //muestra las ramas del repositorio remoto
+	
+	$ git branch -a //muestra las ramas del local y el remoto.
+	
+	como ver la infomración de una rama con mas detalles.
+	
+	$ git show-branch
+	
+	$ git show-branch --all
+	
+	$ git log --all --graph --decorate --oneline
+	
+#COMO VER LA INFORMACIÓN DE NUESTRO REPOSITORIO CON UNA INTERFAS GRAFICA.
+	
+	$ gitk
+	
+	NOTA:	si no se encuentra instaldo debes instalarlo pero toma en cuenta
+		que los profecionales solo utilizan la terminal.
+		
+#COMO ENVIAR UNA RAMA AL REPOSITORIO REMOTO
+	
+	colocate en la rama que deseas enviar y as un push
+	
+		$ git push origin nombre-de-la-rama
+	
+

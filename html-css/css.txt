@@ -1,0 +1,29 @@
+#EFECTOS Y SEUDO CLASES:
+
+
+# EFECTO AL PARAS EL CURSOR SOBRE EL ELEMENTO
+
+	-	:hover
+	
+# EFECTO AL DAR CLIC SOBRE UN ELEMENTO
+
+	-	:active
+	
+# AGREGAR UNA SEUDO CLASE LOS ELEMENTOS
+
+	-	::after{
+		content="texto"
+		}
+		
+	-	https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+	-	https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+	
+	
+	
+#IMPORTANCIA DE LOS ESTILO POR PRIORIDAD
+
+	-	!important
+	-	Inline styles
+	-	#id
+	-	.class
+	-	tag
