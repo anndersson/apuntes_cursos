@@ -1,0 +1,62 @@
+#TECNICAS DE ALINEAMIENTOS QUE SE UTILIZAN:
+
+	#PROPIEDADES BASADAS EN MARGIN:
+	Margin como tal nos idica que trabajaremos con el espacio externo de un
+	elemento, es decir podemos crear un elemento al cual apliquemos un espacio
+	de separación producido por si mismp que afectara su propia pocición con 
+	relación a su contenedor o elementos hermanos que se encuentren por ensima
+	de el.
+	
+	Debemos tomar en cuenta que los elementos hermanos seran afectados en su
+	posición actual por el margin que apliquemos al elemento, podemos pensar en esto
+	como si el elmento que tiene un margin empujara a los elementos de a su alrededor
+	exepto al elemento que se encuetra por ensima de el en este caso el elmento con
+	margin-top sera recorrera hacia abajo.
+	
+	Estas propiedades funcionan muy bien cuando trabajamos con un contenedor con un
+	display grid o flex;
+	
+	Individual margin properties		shorhand property
+	- margin-top						- margin: 10px 10px 10px 10px;
+	- margin-right
+	- margin-bottom
+	- margin-left
+	
+	EJEMPLOS:
+	podemos establecer un margin utilizando a un elemento colocando valores en pixeles:
+	
+	#establece un margin a la izquierda de 10px;
+			.selector {
+	  	    	margin-left: 10px;
+	  		}
+
+	#establece un margin a la derecha de 10px;
+			.selector {
+	  	    	margin-right: 10px;
+	  		}
+	  		
+	#establece un margin superior de 10px;
+			.selector {
+	  	    	margin-top: 10px;
+	  		}
+	  		
+	#establece un margin inferior de 10px;
+			.selector {
+	  	    	margin-bottom: 10px;
+	  		}	
+	
+	#La propiedad por defecto de un elemento magin es en la parte
+	#superior izquierda: 
+		
+		.selector {
+	  	    margin: 0;
+	  	}
+	  	
+	#margin:auto,
+	auto la acción que realiza es la de ocupar todo el espacio disponible de los
+	lados horizontales es decir de izquierda y derecha, este puede ser diefinido
+	directamente a uno de sus lados y en el caso de aplicarlo a ambos las este dividira
+	el espacio disponible en 2 y sera el que coloque en cada uno de los lados dando
+	como resultado un elemento sentrado de manera horizontal.
+	
+	

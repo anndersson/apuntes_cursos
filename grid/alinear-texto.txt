@@ -1,0 +1,16 @@
+#COMO ALINEAR TEXTO DE MANERA HORIZONTAL
+
+
+	#Alinear texto de forma horizontal:
+	text-align:
+				left|right|center|justify|initial|inherit;
+	
+	#Alineación de manera vertical:
+	verical-align:
+					baseline|length|sub|super
+					top|text-top|middle|bottom
+					text-bottom|initial|inherit;
+					
+	#Como alinear de forma vertical controlando los altos:
+	line-height:
+				normal|number|length|initial|inherit;

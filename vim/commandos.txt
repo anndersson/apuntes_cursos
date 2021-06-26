@@ -1,0 +1,272 @@
+ESTOS SON ALGUNO DE LOS COMANDOS PARA TRABAJAR CON VIM
+
+- COMO ESCRIBIR O INSERTAR TEXTO
+	i	con este comando insertas texto en el documento iniciando
+		al principion de la pocición del cursor.
+
+	a	con este comando puedes insertar texto iniciando al final
+		de la posición del cursor.
+	
+	Shift + a	inicial la inserción de texto al final de la linea.
+		
+- COMO INSERTAR UN COMANDO
+	para ello preciona las tecla Esc 2 veces
+	luego preciona : para ingresar un comando.
+	
+
+- COMO GUARDAR LOS CAMBIOS DENTRO DE UN DOCUMENTO:
+	utiliza el comando w
+
+- COMO SALIR DEL DOCUMENTO 
+	utiliza el comando q
+
+- COMO SALIR I GUARDAR LOS CAMBIOS
+	utiliza los comandos wq
+
+- COMO FORZAR EL SALIR SIN GUARDAR 
+	utiliza el comando q!
+
+- COMO MOVILIZARME POR EL COCUMENTO
+	h		moverle a al izquierda
+	j 		hacia abajo
+	k		hacia arriba
+	l		hacia la derecha
+	gg		con este comando me posiciono al comienso del archivo
+	shif + g	con este comando me posiciono al final del archivo.
+	6 shif + g	con este comando me estoy dirigiendo a la linea 6 del
+			documento.
+	0		con este numero podemos posicionarnos al principio de la linea
+	$		con este comando podemos dolocarnos al final de la linea.
+
+
+- COMO BUSCAR UN TEXTO:
+	/	con este comando puedes buscar una palabra en tu documento.
+		toma en cuenta que este empieza a buscar desde la pocición del
+		cursor hacia adelante.
+
+	?	con este puedo realizar una busque de igual manero solo que lo
+		hace iniciando desde la posición del curso hacia atras.
+
+	n		con este comando puedo moverme entre los resultado de la busqueda
+			hacia adelante.
+
+	shif + n	con este comando puedo moverme entre los resultado de la busqueda
+			hacia atraz.
+
+	
+	:s/palabra/nuevapalabra		presiona : para insertar este comando con el podras 
+					remplazar la palabra que indiques por la que desees,
+					toma en cuenta que este solo remplazara la primera
+					palabra despues del cursor.
+
+	:s/palabra/nuevapalabra/g	con este comando podras remplazar todas la palabras
+					de la linea en la que se encuentra el cursor.
+
+	:%s/palabra/nuevapalabra/g	con este comando remplazaras todas las palbras del
+					documento sin preguntar nada.
+
+	:%s/palabra/nuevapalabra/gc	con este comando podras cambiar todas la palabras del
+					documento pero podras ir eligiendo cuales di o no deseas
+					remplazar con las opciones y (si) n (no)
+
+- COMO MOBILIZARME ENTRE PALABRA
+	W	te posiciona al principio de la siguiente palabra.
+	b	te posiciona al final de la siguiente palabra.
+
+- COMO ELIMINAR TEXTO:
+	x	elimina los caracteres iniciando desde el inicio de la
+		palabra.
+
+# COMO MOVERNOS DENTRO DE ARCHIVOS DE MI DOCUMENTO
+	gd	pocicionado en sima del objeto o función que deseo
+		ubicar en mi documento preciono el comando y este
+		resaltara la relación o de donde probiende dicho archivo.
+
+	gf	posicionado en la dirección del archivo me enviara al archivo
+
+	Ctrl + o	nos debuelve un paso atras en el historial por ende
+			nos regresa al documento anterior.
+
+	Crtl + i	nos regresa un paso adelante en el historial por lo tanto
+			si regresamos de un archivo con estas teclas podemos ver
+			de manera rapida el archivo que teniamos precente.
+
+# FORMAS DE ELIMINAR TEXTO EN EL EDITOR DE NVIM
+	dw	(delate work) con este comando posicionado sobre una palabra esta
+		se eliminara.
+
+	Shif + d	Este elimina el contenido desde la pocición del cursor asta el
+			final de la linea.
+
+	dd		con este comando podemos eliminar la linea completa.
+
+	p		con es comando pegamos lo que tengamos en la papelera, este se
+			coloca por debajo de la pocición del curso.
+
+	shif + p	con esto pegamos el texto que tenemos en la papelera por encima
+			de la pocición del cursor.
+
+	x		con este comando puedes cortar etxto.
+
+	ciw		con este comando eliminas la palabra en la que se encuentra el
+			cursor y e prepara para insertar un texto.
+
+# ABRIR LINEA, REEMPLAZAR COPIAR Y PEGAR.
+	o		con este comando se crea una nueva lina y nos posiciona listos para
+			insertar texto, toma en cuenta que este lo iniciar en la parte de
+			abajo de la posición actual del cursor.
+
+	shif + o	con este comando agregaremos una nueva linea en la parte superior
+			de la posición actual del cursor.
+
+	shif + r	con este comando podemos posicionarnos en el modo de remplazar el
+			cual nos permitira remplazar datos en el modo normal.
+
+	v		con este comando nos posicionamos en el modo visual esto inplica
+			que para donde nos movilizaemos este se estar seleccionando el 
+			contenido
+
+	y		con este comando podemos copiar lo se encuentre seleccionado, recuerda
+			que puedes utilizar el comando (p) para pegar contenido don lo necesites.
+
+	
+
+# COMO DESHACER UNA ELIMINACIÓN DE TEXTO
+	u		podemos des hacer los comabios que se realizaron.	
+
+	Ctrl + r	con este comando re hacemos.
+
+# OPERACIONES ARITMETICAS EN MOVIMIENTO Y ELIMINACIÓN DE DATOS.
+	ELIMINACIÓN:
+		d6w	con este comando estamos eliminando 6 palabra por delante
+			de la pocición del cursor.
+
+	MOVERSE:
+
+		4w	esto me permite movilizarme cuatro palabra al frente
+
+		4b	esto me permite movilizarme cuatro palabras hacia atras.
+	
+
+
+# COMANDOS PARA PROGRAMACIÓN
+Estos comandos son muy utiles cuando estamos trabajando con código.
+
+	DESPLASARCE ENTRE SIGNOS () {} []
+		%	con este comando puedo moverme al signo de apertura o cierre
+			segun la pocición del cursor.
+
+
+COMO CONFIGURAR VIM Y NVIM
+En la siguiente dirección podemos encontrar el archivo de configuración de nvim
+~/.config/nvim/init.vim, si este archivo no existe entonces crealo pues de seguro
+tiene cargado las configuraciónes por defecto, en el pega la siguiente configuración
+que te redirigira a una carpeta donde podremos colocar nuestras configuraciones generales:
+
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
+source ~/.vimrc
+
+Estas configuraciones son basicas que ayudaran a aque vin se vea mejor, estas configuraciones
+van en el archvio .vimrc este deberi de estar en la ~/-vimrc como se especifico en el
+comando source del archivo init.vim
+
+set number
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set encoding=utf-8
+set showmatch
+set sw=2
+set relativenumber
+
+
+COMO INSTALAR PLUGGED EN NVIM
+1)	para ellos instalaremos los plugins nvim para linux que se encuentra en el 
+	siguiente repositorio: https://github.com/junegunn/vim-plug
+	en el encontraras el comando de instalación para linux.
+
+2)	para instalar plugis lo aremos enserrando en la siguiente linea se código
+	los plug que necesitemos, pega el siguiente código en el archivo .vimrc
+
+	
+	call plug#begin('~/.local/share/nvim/plugged')
+
+	    "en esta sección agregaras tus plug
+
+	call plug#end()
+
+3)	dentro de el agregas el nombre del plug que instalas por ejemplo
+
+	Plug 'nombrede Plug'
+
+4)	fuera del cierre de call agregaremos las configuraciones de los plug
+
+5)	Una vez indicado el plugin guardamos y cerramos nvim par reiniciar y 
+	realizar la instalación de los plug antes indicados.
+
+6)	iniciamos nuevamente el archivo .vimrc e ingresamos el siguiente comando
+	para instalar plug :PlugInstall    se iniciar una barra de carga que indica
+	el proceso de instalación y una vez finalizado se mostrara un - indicando que
+	el plug ya fue instalado.
+
+
+#SE TE PRESENTA UNA HOJA DE CONFIGURACIONES BASICAS DE USO.
+
+"Configuraciones basicas para nvim
+set number
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set sw=2
+set relativenumber
+
+"En los parentecis deberas colocar la dirección de donde se a instalado
+"el controlador de plug que instalaste, la dirección la veran en el link
+"de instalación solo recuerda que buscamos la carpeta llamada plugged
+
+call plug#begin('~/.local/share/nvim/plugged')
+"Temas
+"En este link se encuentran mas temas:
+"https://stsewd.dev/es/posts/neovim-plugins/
+
+Plug 'joshdick/onedark.vim' "https://stsewd.dev/es/posts/neovim-plugins/
+
+" IDE
+Plug 'easymotion/vim-easymotion' "se utiliza para saltar en tre mi documento.
+Plug 'scrooloose/nerdtree' "Permite viajar entre directorios
+"Con este plug podemos navegar entre las ventanas abiertas utilizando
+"las teclad de dirección de vim GHJL con Ctrl sostenido.
+Plug 'christoomey/vim-tmux-navigator'
+
+call plug#end()
+set termguicolors  "Activa true colors en la terminal
+colorscheme onedark "Activa tema ondark
+
+let mapleader=" "
+nmap <Leader>s <Plug>(easymotion-s2)
+
+"utiliza la combinación de teclase space + nt
+nmap <Leader>nt :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen=1 "Este permite que el editor se cierre
+			 "unavez seleccionado el archivo.
+
+"Atajos de tecla para guardar y salir utilizando la combinaciones de teclas
+"space + w para guardar
+"space + q para salir
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+
+
+
+
+
+
+
+	
