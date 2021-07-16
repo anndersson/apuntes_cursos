@@ -215,8 +215,10 @@ COMO INSTALAR PLUGGED EN NVIM
 
 
 #SE TE PRESENTA UNA HOJA DE CONFIGURACIONES BASICAS DE USO.
+--------------------------------------------------------------
 
-"Configuraciones basicas para nvim
+
+
 set number
 set mouse=a
 set numberwidth=1
@@ -224,49 +226,79 @@ set clipboard=unnamed
 syntax enable
 set showcmd
 set ruler
+set cursorline
+set encoding=utf-8
+set showmatch
 set sw=2
 set relativenumber
 
-"En los parentecis deberas colocar la dirección de donde se a instalado
-"el controlador de plug que instalaste, la dirección la veran en el link
-"de instalación solo recuerda que buscamos la carpeta llamada plugged
+set laststatus=2
+set noshowmode
 
-call plug#begin('~/.local/share/nvim/plugged')
+"Inicio de instalción de plugs
+call plug#begin('~/.vim/plugged')
+
+"-----------------
 "Temas
-"En este link se encuentran mas temas:
-"https://stsewd.dev/es/posts/neovim-plugins/
+"-----------------
+Plug 'morhetz/gruvbox'
 
-Plug 'joshdick/onedark.vim' "https://stsewd.dev/es/posts/neovim-plugins/
+"-----------
+"IDE
+"-----------
 
-" IDE
-Plug 'easymotion/vim-easymotion' "se utiliza para saltar en tre mi documento.
-Plug 'scrooloose/nerdtree' "Permite viajar entre directorios
-"Con este plug podemos navegar entre las ventanas abiertas utilizando
-"las teclad de dirección de vim GHJL con Ctrl sostenido.
+"easymotion: permite viajar entre mi documento mediante un atajo de teclado
+"el cual se defini en la configuración de plugs, este permite posicionarse en 
+"dicho lugar mediante una letra asignada resultado de la busqueda por dos
+"letra del plug, en esta claso el atajo configurado es space + s
+Plug 'easymotion/vim-easymotion'
+
+"nertdtree: permite viajar entre directorios directorios con el comando 
+"NERTreeFind, pero en este claso emos creado un atajo de teclado que nos
+"permita inicializar el comando de manera mas facil; space + nt
+"podemos habrir dos archivos a la vez posicionandonos en el archivo y con la
+"tecla s, podemos movernos entre los archivos con Ctl + h|j|k|l
+Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
-set termguicolors  "Activa true colors en la terminal
-colorscheme onedark "Activa tema ondark
+"Fin de instalación de plug
 
-let mapleader=" "
+
+"SECCIÓN DE CONFIGURACIÓN DE PLUG INSTALADOS
+
+"Tema
+colorscheme gruvbox
+let g:gruvbox_constrast_dark = "hard"
+
+"--------------------------------
+"DEFINICIÓN DE ATAJOS DE TECLADO
+"--------------------------------
+"nmap significa que las teclas indicadas solo funcionan en modo normal
+"es decir cuando no estamos en modo insert
+
+"Tecla lider definida: space
+let mapleader = " "
+
+"Definicion de teclas de atajo, esta funciona luego de haber activado la
+"tecla lider, como se declara:
+"1) inidicamos un atajo con nmap
+"2) definimos un letra con <Leader>letra
+"3) definimos el plug al que va dirigido con <Plug>(nombrePlug)
 nmap <Leader>s <Plug>(easymotion-s2)
 
-"utiliza la combinación de teclase space + nt
-nmap <Leader>nt :NERDTreeFind<CR>
-let NERDTreeQuitOnOpen=1 "Este permite que el editor se cierre
-			 "unavez seleccionado el archivo.
+"ATAJOS DE TECLADO PARA COMANDOS
+"Con este medoto podemos definir un atajo de teclado que ejecute un comando
+"de la siguiente manera:
+"1) usamos nmap para inicializar un atajo de teclado
+"2) indicamos la letra con <Leader>letra
+"3) seguido de la letra usamos : para indica el comando
+"4) utilizamos la etiqueta <CR> para ejecutar la tecla enter
+"
+"nota: usamos <CR> ahora ya que ejecutaremos la tecla enter como cualquier
+"otra en lugar de un plug como lo hicimos antes con  <Plug>.
 
-"Atajos de tecla para guardar y salir utilizando la combinaciones de teclas
-"space + w para guardar
-"space + q para salir
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
+nmap <Leader>nt :NERDTreeFind <CR>
 
-
-
-
-
-
-
-	
+nmap <Leader>w :w <CR>
+n
