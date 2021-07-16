@@ -65,13 +65,22 @@ public class InterfazGrafica extends JFrame implements ActionListener{
 
         if (e.getSource() == buttonRegistrar) {
 
-            String correo = inputCorreo.getText();//jefuentes@scl.edu.gt  20
-
+            //Instancia de clase
             logicaDelPrograma registrarDatos = new logicaDelPrograma();
 
-            boolean comprobacionCorreo = registrarDatos.comprobacionCorre(correo);
+            String correo = inputCorreo.getText();//jefuentes@scl.edu.gt  20
+            String nombre = inputNombre.getText();//Jossue
 
-            if(comprobacionCorreo){
+            //Acción de correo
+            if(registrarDatos.comprobacionCorre(correo)){
+                labelVerificacion.setText("true");
+            }else{
+                labelVerificacion.setText("null");
+            }
+
+            //Acción de nombre
+
+            if(registrarDatos.comprobacionNombre(correo)){
                 labelVerificacion.setText("true");
             }else{
                 labelVerificacion.setText("null");
