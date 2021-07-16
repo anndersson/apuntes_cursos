@@ -86,7 +86,7 @@ public class InterfazGrafica extends JFrame implements ActionListener{
                 labelVerificacion.setText("null");
             }
 
-        }
+        } 
 
 
     }
