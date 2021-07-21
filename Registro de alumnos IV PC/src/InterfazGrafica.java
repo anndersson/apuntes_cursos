@@ -72,24 +72,22 @@ public class InterfazGrafica extends JFrame implements ActionListener{
             String correo = inputCorreo.getText();//jefuentes@scl.edu.gt  20
             String nombre = inputNombre.getText();//Jossue
 
-            //Acción de correo
+            //Verificación del correo electronico
             if(registrarDatos.comprobacionCorre(correo)){
-                labelVerificacion.setText("true");
-                labelVerificacion.setOpaque(true);
-                labelVerificacion.setForeground(Color.GREEN);
+                labelVerificacion.setText("true");              // Agrega un texto
+                labelVerificacion.setForeground(Color.GREEN);   // Cambia el color del texto
             }else{
                 labelVerificacion.setText("null");
-                labelVerificacion.setOpaque(true);
                 labelVerificacion.setForeground(Color.RED);
             }
 
-            //Acción de nombre
+            //Verificación del nombre de usuario
 
             if(registrarDatos.comprobacionNombre(correo)){
 
-                //labelVerificacion.setText("true");
+                //Acción si es verdadero
             }else{
-                //labelVerificacion.setText("null");
+                //Acción si es falso
             }
 
         }
