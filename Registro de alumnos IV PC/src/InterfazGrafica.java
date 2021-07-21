@@ -7,8 +7,9 @@ public class InterfazGrafica extends JFrame implements ActionListener{
     public JLabel titulo;
     public JLabel labelCorreo, labelNombre, labelFechas;
     public JTextField inputCorreo, inputNombre, inputFecha;
-    public JLabel labelVerificacion;
+    public JLabel labelVerificacionCorreo, labelVerificacionNombre, labelVerificacionEdad;
     public JButton buttonRegistrar;
+    public JLabel lableMensajeFinal;
 
     InterfazGrafica(){
         setLayout(null);
@@ -21,18 +22,27 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         labelCorreo = new JLabel("Correo electronico");
         labelCorreo.setBounds(130, 100, 140, 25);
         add(labelCorreo);
-
-        labelVerificacion = new JLabel("");
-        labelVerificacion.setBounds(510, 100, 140, 25);
-        add(labelVerificacion);
+        labelVerificacionCorreo = new JLabel("");
+        labelVerificacionCorreo.setBounds(510, 100, 140, 25);
+        add(labelVerificacionCorreo);
 
         labelNombre = new JLabel("Nombre Completo");
         labelNombre.setBounds(130, 150, 140, 25);
         add(labelNombre);
+        labelVerificacionNombre = new JLabel("");
+        labelVerificacionNombre.setBounds(510, 150, 140, 25);
+        add(labelVerificacionNombre);
 
         labelFechas = new JLabel("Fecha de nacimiento");
         labelFechas.setBounds(130, 200, 160, 25);
         add(labelFechas);
+        labelVerificacionEdad = new JLabel("");
+        labelVerificacionEdad.setBounds(510, 200, 140, 25);
+        add(labelVerificacionEdad);
+
+        lableMensajeFinal = new JLabel("Mensaje de verificación");
+        lableMensajeFinal.setBounds(130, 280, 300, 25);
+        add(lableMensajeFinal);
 
         //ENTRADA DE DATOS
         inputCorreo = new JTextField();
@@ -49,7 +59,7 @@ public class InterfazGrafica extends JFrame implements ActionListener{
 
         //BOTÓN DE REGISTRO
         buttonRegistrar = new JButton("Registrar");
-        buttonRegistrar.setBounds(180,300,100,25);
+        buttonRegistrar.setBounds(550,400,100,25);
         add(buttonRegistrar);
         buttonRegistrar.addActionListener(this);
     }
@@ -69,25 +79,36 @@ public class InterfazGrafica extends JFrame implements ActionListener{
             //Instancia de clase
             logicaDelPrograma registrarDatos = new logicaDelPrograma();
 
-            String correo = inputCorreo.getText();//jefuentes@scl.edu.gt  20
-            String nombre = inputNombre.getText();//Jossue
+            //RECUPERACIÓN DE DATOS
+            String correo = inputCorreo.getText();
+            String nombre = inputNombre.getText();
+            String edad = inputFecha.getText();
 
             //Verificación del correo electronico
             if(registrarDatos.comprobacionCorre(correo)){
-                labelVerificacion.setText("true");              // Agrega un texto
-                labelVerificacion.setForeground(Color.GREEN);   // Cambia el color del texto
+                labelVerificacionCorreo.setText("true");              // Agrega un texto
+                labelVerificacionCorreo.setForeground(Color.GREEN);   // Cambia el color del texto
             }else{
-                labelVerificacion.setText("null");
-                labelVerificacion.setForeground(Color.RED);
+                labelVerificacionCorreo.setText("null");
+                labelVerificacionCorreo.setForeground(Color.RED);
             }
 
             //Verificación del nombre de usuario
-
-            if(registrarDatos.comprobacionNombre(correo)){
-
-                //Acción si es verdadero
+            if(registrarDatos.comprobacionNombre(nombre)){
+                labelVerificacionNombre.setText("true");
+                labelVerificacionNombre.setForeground(Color.GREEN);
             }else{
-                //Acción si es falso
+                labelVerificacionNombre.setText("null");
+                labelVerificacionNombre.setForeground(Color.red);
+            }
+
+            //Verificación de la edad del usuario
+            if(registrarDatos.comprobacionEdad(edad)){
+                labelVerificacionEdad.setText("true");
+                labelVerificacionEdad.setForeground(Color.GREEN);
+            }else{
+                labelVerificacionEdad.setText("null");
+                labelVerificacionEdad.setForeground(Color.red);
             }
 
         }

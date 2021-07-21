@@ -35,7 +35,25 @@ public class logicaDelPrograma {
 
     public boolean comprobacionNombre(String nombre){
 
-        //Programación para la comprobación del nombre del usuario.
+        //Valores no permitidos en un nombre
+        char numeros []= {'0','1','2','3','4','5','6','7','8','9'};
+
+        boolean resultado = true;
+
+        for(int i = 0; i < nombre.length();i++){
+
+            for (int j = 0; j < numeros.length ; j++){
+                if (nombre.charAt(i) == numeros[j]){
+                    resultado = false;
+                }
+            }
+        }
+
+        return resultado;
+    }
+
+    public boolean comprobacionEdad(String edad){
+        
 
         return true;
     }
