@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*; //libreria para agregar un color
 import java.awt.event.*;
 
 public class InterfazGrafica extends JFrame implements ActionListener{
@@ -74,16 +75,21 @@ public class InterfazGrafica extends JFrame implements ActionListener{
             //Acción de correo
             if(registrarDatos.comprobacionCorre(correo)){
                 labelVerificacion.setText("true");
+                labelVerificacion.setOpaque(true);
+                labelVerificacion.setForeground(Color.GREEN);
             }else{
                 labelVerificacion.setText("null");
+                labelVerificacion.setOpaque(true);
+                labelVerificacion.setForeground(Color.RED);
             }
 
             //Acción de nombre
 
             if(registrarDatos.comprobacionNombre(correo)){
-                labelVerificacion.setText("true");
+
+                //labelVerificacion.setText("true");
             }else{
-                labelVerificacion.setText("null");
+                //labelVerificacion.setText("null");
             }
 
         }

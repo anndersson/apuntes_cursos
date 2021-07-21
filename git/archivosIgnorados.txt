@@ -1,0 +1,31 @@
+#PORQUE OMITIR LA CARGA DE ARCHIVOS AL REPOCITORIO
+Cuando trabajamos en equipo problemente tengamos archivos que son solo nuestros
+como llavez privadas de github contraseñas de apis de instagram facebook por ejemplo
+los cuales no deseamos agregar de manera publica.
+
+Otro de los motivos por el cual se debe de omitir algunos archivos es por la sobre carga
+recuerda que cada commit es una copia de nuestro trabajo por lo que los vinario pueden ser
+muy pesados como imagenes etc estos los podemos solo referenciar con bases de datos u otros
+metodos como imgur.com
+
+#COMO OMITIR LOS ARCHIVSO
+para ellos seguiremos estos pasos:
+
+- crearemos un archivos con nombre .gitignore
+- agregaremos en el las extenciones, carpetas o archivos que deseamos omitir
+
+
+#COMO IGNORAR DISTINTOS ARCHIVOS ARPETAS O TIPOS DE BINARIOS.
+
+- Como ignorar los archivos que compartan una extensión
+
+	*.jpg		#Ignora todos los archivos .jpg
+	!logo.jpg	#excepto el archivo logo.jpg
+
+- como ignorar archivos anidados
+
+	carpeta/subCarpeta/
+
+
+NOTA:
+solo debes crear cada recla en una linea pror condición que necesites.

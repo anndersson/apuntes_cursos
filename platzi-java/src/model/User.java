@@ -10,7 +10,6 @@ public abstract class User {
     public User(String name, String email) {
         this.name = name;
         this.email = email;
-        System.out.println("----------------AJAAAAAAAAAAAA!");
     }
 
     public int getId() {
@@ -59,9 +58,10 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "model.User:-------- " + name + ", Email: "+email+
+        return "model.User: " + name + ", Email: "+email+
                 "\nAddreess: "+address+". Phone: "+phoneNumber;
     }
 
+    public abstract void showDataUser();
 
 }

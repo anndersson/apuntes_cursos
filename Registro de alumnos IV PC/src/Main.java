@@ -8,8 +8,6 @@ public class Main{
         InterfazGrafica interfazGrafica = new InterfazGrafica();
         interfazGrafica.ventanaDeRegistro();
 
-
-
     }
 
 }
