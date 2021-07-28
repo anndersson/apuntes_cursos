@@ -4,38 +4,31 @@ import java.awt.event.*;
 
 public class InterfazGrafica extends JFrame implements ActionListener{
 
-    public JLabel titulo;
-    public JLabel labelCorreo, labelNombre, labelFechas;
+    //PROPIEDADES
+    public JLabel ViewText;
     public JTextField inputCorreo, inputNombre, inputFecha;
     public JLabel labelVerificacionCorreo, labelVerificacionNombre, labelVerificacionEdad;
     public JButton buttonRegistrar;
     public JLabel lableMensajeFinal;
 
-    InterfazGrafica(){
+    //COMPORTAMIENTOS
+    InterfazGrafica(){//<-- constructor
+
         setLayout(null);
 
-        //ETIQUETAS
-        titulo = new JLabel("Registro de Alumnos");
-        titulo.setBounds(285, 20, 230, 80);
-        add(titulo);
+        etiqueta("Registro de alumnos",285,20,230,80);
+        etiqueta("Correo electronico",130, 100, 140, 25);
+        etiqueta("Nombre Completo",130, 150, 140, 25);
+        etiqueta("Fecha de nacimiento",130, 200, 160, 25);
 
-        labelCorreo = new JLabel("Correo electronico");
-        labelCorreo.setBounds(130, 100, 140, 25);
-        add(labelCorreo);
         labelVerificacionCorreo = new JLabel("");
         labelVerificacionCorreo.setBounds(510, 100, 140, 25);
         add(labelVerificacionCorreo);
 
-        labelNombre = new JLabel("Nombre Completo");
-        labelNombre.setBounds(130, 150, 140, 25);
-        add(labelNombre);
         labelVerificacionNombre = new JLabel("");
         labelVerificacionNombre.setBounds(510, 150, 140, 25);
         add(labelVerificacionNombre);
 
-        labelFechas = new JLabel("Fecha de nacimiento");
-        labelFechas.setBounds(130, 200, 160, 25);
-        add(labelFechas);
         labelVerificacionEdad = new JLabel("");
         labelVerificacionEdad.setBounds(510, 200, 140, 25);
         add(labelVerificacionEdad);
@@ -63,6 +56,16 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         add(buttonRegistrar);
         buttonRegistrar.addActionListener(this);
     }
+
+    //Construcción de texto de la interfaz
+    public void etiqueta(String contenido, int horizontal, int vertical, int width, int heigth){
+        setLayout(null);
+        ViewText = new JLabel(contenido);
+        ViewText.setBounds(horizontal, vertical, width, heigth);
+        add(ViewText);
+    }
+
+
 
     public void ventanaDeRegistro(){
         InterfazGrafica interfazGrafica = new InterfazGrafica();

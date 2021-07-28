@@ -1,9 +1,6 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+public class Main{// Clase principal
 
-public class Main{
-
-    public static void main(String[] args) {
+    public static void main(String[] args) {// Método inicial
 
         InterfazGrafica interfazGrafica = new InterfazGrafica();
         interfazGrafica.ventanaDeRegistro();
