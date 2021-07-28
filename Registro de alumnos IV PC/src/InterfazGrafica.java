@@ -24,11 +24,9 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         labelVerificacionCorreo = new JLabel("");
         labelVerificacionCorreo.setBounds(510, 100, 140, 25);
         add(labelVerificacionCorreo);
-
         labelVerificacionNombre = new JLabel("");
         labelVerificacionNombre.setBounds(510, 150, 140, 25);
         add(labelVerificacionNombre);
-
         labelVerificacionEdad = new JLabel("");
         labelVerificacionEdad.setBounds(510, 200, 140, 25);
         add(labelVerificacionEdad);
@@ -57,6 +55,9 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         buttonRegistrar.addActionListener(this);
     }
 
+    InterfazGrafica(String titulo) {
+    }
+
     //Construcción de texto de la interfaz
     public void etiqueta(String contenido, int horizontal, int vertical, int width, int heigth){
         setLayout(null);
@@ -67,7 +68,16 @@ public class InterfazGrafica extends JFrame implements ActionListener{
 
 
 
+    //VENTANAS
     public void ventanaDeRegistro(){
+        InterfazGrafica interfazGrafica = new InterfazGrafica();
+        interfazGrafica.setBounds(0,0,700,500);// POSICIÓN Y TAMAÑO DE MI VENTANA
+        interfazGrafica.setVisible(true); 		// PERMITE MOSTRAR MI VENTANA
+        interfazGrafica.setResizable(false);	// REDIMENSION DE LA VENTANA
+        interfazGrafica.setLocationRelativeTo(null);
+    }
+
+    public void inicioSesion(){
         InterfazGrafica interfazGrafica = new InterfazGrafica();
         interfazGrafica.setBounds(0,0,700,500);// POSICIÓN Y TAMAÑO DE MI VENTANA
         interfazGrafica.setVisible(true); 		// PERMITE MOSTRAR MI VENTANA
