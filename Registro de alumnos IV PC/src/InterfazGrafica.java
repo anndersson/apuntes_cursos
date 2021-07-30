@@ -1,5 +1,5 @@
 import javax.swing.*;
-import java.awt.*; //libreria para agregar un color
+import java.awt.*; //libreria para agregar color al JLabel
 import java.awt.event.*;
 
 public class InterfazGrafica extends JFrame implements ActionListener{
@@ -11,10 +11,11 @@ public class InterfazGrafica extends JFrame implements ActionListener{
     public JButton buttonRegistrar;
     public JLabel lableMensajeFinal;
 
-    //COMPORTAMIENTOS
+    //COMPORTAMIENTOS MÉTODO CONSTRUCTOR
     InterfazGrafica(){//<-- constructor
 
-        setLayout(null);
+        System.out.println("hola");
+        setLayout(null); //Control del diseño predeterminado
 
         etiqueta("Registro de alumnos",285,20,230,80);
         etiqueta("Correo electronico",130, 100, 140, 25);
@@ -55,7 +56,8 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         buttonRegistrar.addActionListener(this);
     }
 
-    InterfazGrafica(String titulo) {
+    InterfazGrafica(String ventana){
+        etiqueta("Ventana de registro",285,20,230,80);
     }
 
     //Construcción de texto de la interfaz
@@ -65,8 +67,6 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         ViewText.setBounds(horizontal, vertical, width, heigth);
         add(ViewText);
     }
-
-
 
     //VENTANAS
     public void ventanaDeRegistro(){
@@ -78,11 +78,11 @@ public class InterfazGrafica extends JFrame implements ActionListener{
     }
 
     public void inicioSesion(){
-        InterfazGrafica interfazGrafica = new InterfazGrafica();
-        interfazGrafica.setBounds(0,0,700,500);// POSICIÓN Y TAMAÑO DE MI VENTANA
-        interfazGrafica.setVisible(true); 		// PERMITE MOSTRAR MI VENTANA
-        interfazGrafica.setResizable(false);	// REDIMENSION DE LA VENTANA
-        interfazGrafica.setLocationRelativeTo(null);
+        InterfazGrafica interfazLogin = new InterfazGrafica("login");
+        interfazLogin.setBounds(0,0,700,500);// POSICIÓN Y TAMAÑO DE MI VENTANA
+        interfazLogin.setVisible(true); 		// PERMITE MOSTRAR MI VENTANA
+        interfazLogin.setResizable(false);	// REDIMENSION DE LA VENTANA
+        interfazLogin.setLocationRelativeTo(null);
     }
 
     public void actionPerformed(ActionEvent e) {
