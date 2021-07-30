@@ -127,5 +127,5 @@ public class InterfazGrafica extends JFrame implements ActionListener{
         }
 
 
-    }
+    } 
 }
